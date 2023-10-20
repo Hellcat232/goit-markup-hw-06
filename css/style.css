@@ -16,10 +16,11 @@ img {
   display: block;
 }
 .container {
-  max-width: 1158px;
+  max-width: 320px;
   padding-left: 16px;
   padding-right: 16px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .body {
   font-family: "Roboto", sans-serif;
@@ -27,8 +28,8 @@ img {
   background-color: #ffffff;
 }
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 .text {
   font-size: 16px;
@@ -147,7 +148,7 @@ a {
 
 .main-section {
   max-width: 1440px;
-  padding: 188px 0;
+  padding: 72px 0;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -184,10 +185,10 @@ a {
   background-color: #404bbf;
 }
 .subtitle {
-  font-size: 20px;
+  /* font-size: 20px;
   font-weight: 500;
-  line-height: 1.2; /* 120% */
-  letter-spacing: 0.02em;
+  line-height: 1.2; 
+  letter-spacing: 0.02em; */
   color: #2e2f42;
 }
 
@@ -218,18 +219,18 @@ a {
 
 .effective-title {
   font-family: Roboto;
-  font-size: 56px;
+  font-size: 36px;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.07; /* 107.143% */
-  letter-spacing: 1.12px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
   color: #ffffff;
   text-align: center;
-  max-width: 496px;
+  max-width: 288px;
   margin: 0 auto;
 }
 .effective-title {
-  margin-bottom: 48px;
+  margin-bottom: 72px;
 }
 .title-button {
   font-family: "Roboto", sans-serif;
@@ -252,11 +253,12 @@ a {
 
 .futures-list {
   display: flex;
-  gap: 24px;
+  gap: 72px;
+  flex-direction: column;
 }
 .icon {
   height: 112px;
-  display: flex;
+  display: none;
   border-radius: 4px;
   border: 1px solid #8e8f99;
   background-color: #f4f4fd;
@@ -265,19 +267,29 @@ a {
   margin-bottom: 8px;
 }
 .futures-item {
-  flex-basis: calc((100% - 3 * 24px) / 4);
+  /* flex-basis: calc((100% - 3 * 24px) / 4); */
+  width: 100%;
 }
 .future-title {
   font-family: Roboto;
-  font-size: 20px;
+  font-size: 36px;
   font-style: normal;
-  font-weight: 500;
-  line-height: 1.2; /* 120% */
-  letter-spacing: 0.4px;
-}
-.futures-title {
+  font-weight: 700;
+  line-height: 1.11; /* 120% */
+  letter-spacing: 0.02em;
+  text-align: center;
+  width: 100%;
   margin-bottom: 8px;
 }
+.futures-text {
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.02em;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -295,7 +307,8 @@ a {
 }
 .team-list {
   display: flex;
-  gap: 24px;
+  gap: 72px;
+  flex-wrap: wrap;
 }
 .section-team {
   background-color: #f4f4fd;
@@ -303,7 +316,8 @@ a {
 
 .team-list-info {
   background-color: #ffffff;
-  width: calc((100% - 72px) / 4);
+  /* width: calc((100% - 72px) / 4); */
+  width: 100%;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
@@ -755,4 +769,99 @@ a {
   opacity: 1;
   visibility: hidden;
   pointer-events: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+  .main-section {
+    padding: 112px 0;
+  }
+
+  .effective-title {
+    max-width: 496px;
+    font-size: 56px;
+    margin-bottom: 36px;
+    line-height: 1.07; /* 107.143% */
+  }
+  .futures-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: unset;
+  }
+  .futures-item {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .futures-title {
+    text-align: left;
+  }
+
+  .futures-text {
+    line-height: 1.5; /* 150% */
+  }
+
+  .team-list {
+    gap: 24px;
+  }
+
+  .team-list-info {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+  }
+
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .main-section {
+    padding: 188px 0;
+  }
+
+  .effective-title {
+    margin-bottom: 48px;
+  }
+  .futures-list {
+    flex-direction: unset;
+    flex-wrap: nowrap;
+    gap: 24;
+  }
+  .futures-item {
+    flex-basis: calc((100% - 3 * 24px) / 4);
+    /* width: 100%; */
+  }
+  .icon {
+    display: flex;
+  }
+
+  .futures-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+    margin-bottom: 8px;
+  }
+
+  .futures-text {
+    font-weight: 400;
+  }
+
+  .team-list {
+    gap: 24px;
+  }
+
+  .team-list-info {
+    width: calc((100% - 72px) / 4);
+  }
 }

@@ -840,7 +840,9 @@ a {
   }
   .footer-container {
     /* margin-right: 120px; */
-    margin-left: 108px;
+    /* margin-left: 0; */
+    margin: 0 auto;
+    padding: 0;
   }
   .container-left-section {
     display: flex;

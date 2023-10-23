@@ -397,7 +397,7 @@ a {
   /* flex-basis: calc((100% - 3 * 24px) / 4); */
   width: 100%;
 }
-.future-title {
+.futures-title {
   font-family: Roboto;
   font-size: 36px;
   font-style: normal;
@@ -711,8 +711,8 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 408px;
-  min-height: 584px;
+  width: 288px;
+  min-height: 623px;
   background-color: #fcfcfc;
   border-radius: 4px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -871,7 +871,9 @@ a {
   align-items: center;
   justify-content: center;
   fill: transparent;
+  margin-right: 8px;
 }
+
 .checkbox-a {
   color: #4d5ae5;
 }
@@ -983,6 +985,7 @@ a {
   }
   .futures-item {
     width: calc((100% - 24px) / 2);
+    margin-bottom: 72px;
   }
 
   .futures-title {
@@ -991,6 +994,7 @@ a {
 
   .futures-text {
     line-height: 1.5; /* 150% */
+    margin-right: 24px;
   }
 
   .team-list {
@@ -1065,6 +1069,11 @@ a {
   .subscribe-title {
     text-align: left;
   }
+
+  .modal-window {
+    width: 408px;
+    min-height: 584px;
+  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -1118,7 +1127,7 @@ a {
   .futures-list {
     flex-direction: unset;
     flex-wrap: nowrap;
-    gap: 24;
+    gap: 24px;
   }
   .futures-item {
     flex-basis: calc((100% - 3 * 24px) / 4);
@@ -1195,5 +1204,8 @@ a {
   }
   .button-subs {
     margin-left: 24px;
+  }
+
+  .modal-window {
   }
 }

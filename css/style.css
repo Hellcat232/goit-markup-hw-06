@@ -1058,6 +1058,7 @@ a {
   }
   .futures-item {
     width: calc((100% - 24px) / 2);
+    /* gap: 24px 72px; */
   }
 
   .futures-title {
@@ -1073,7 +1074,7 @@ a {
   }
 
   .team-list-info {
-    width: calc((100% - 24px) / 2);
+    /* width: calc((100% - 24px) / 2); */
   }
 
   .section-portfolio-list {
